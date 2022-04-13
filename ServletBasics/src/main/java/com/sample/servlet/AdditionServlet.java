@@ -12,16 +12,21 @@ public class AdditionServlet extends GenericServlet{
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		
+		PrintWriter out = res.getWriter();
 		String number1 = req.getParameter("number1");
 		String number2 = req.getParameter("number2");
 		if (number1 != null && number2 != null && number1.trim().length() > 0 && number2.trim().length() > 0) {
-			int num1 = Integer.parseInt(number1);
-			int num2 = Integer.parseInt(number2);
-			PrintWriter out = res.getWriter();
-			out.println("<p>Result = " + (num1 + num2) + "</p>");
+			try {
+				int num1 = Integer.parseInt(number1);
+				int num2 = Integer.parseInt(number2);
+				
+				out.println("<p>Result = " + (num1 + num2) + "</p>");
+			} catch (NumberFormatException e) {
+				
+				out.println("Invalid Input");
+			}
 		} else {
-			PrintWriter out = res.getWriter();
+			
 			out.println("<p>Invalid Input</p>");
 		}
 	}
