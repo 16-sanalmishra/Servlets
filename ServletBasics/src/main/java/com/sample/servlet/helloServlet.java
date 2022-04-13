@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 
 import org.apache.catalina.connector.Response;
 
-public class helloServlet extends GenericServlet{
+public class helloServlet extends GenericServlet {
 
 	@Override
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
@@ -22,7 +22,7 @@ public class helloServlet extends GenericServlet{
 		out.println("<h3>Hello World from Servlets !!</h3>");
 		out.println("</body>");
 		out.println("</html>");
-		
+
 	}
 
 }
