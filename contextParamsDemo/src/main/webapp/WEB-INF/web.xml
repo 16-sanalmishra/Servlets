@@ -35,4 +35,13 @@
   	<url-pattern>/TestParamServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>TestServlet1</servlet-name>
+  	<servlet-class>com.testParam.servlets.testServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestServlet1</servlet-name>
+  	<url-pattern>/TestServlet1</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
